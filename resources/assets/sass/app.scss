@@ -1,0 +1,80 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Normalize.css
+@import "node_modules/normalize.css/normalize";
+
+// Flexbox Grid Sass
+@import "node_modules/flexboxgrid-sass/flexboxgrid";
+
+// Bootstrap
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Misc
+@import "link-button/link-button";
+
+
+html, body {
+  height : 100%;
+}
+
+body {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  color: $fonts-color;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  width: 21ch;
+
+  animation: type 1s steps(21), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s;
+  animation-fill-mode: both
+}
+
+.wait-1s {
+  animation-delay: 1s
+}
+
+.wait-2s {
+  animation-delay: 2s
+}
+
+
+
